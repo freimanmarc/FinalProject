@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_22_202622) do
+ActiveRecord::Schema.define(version: 2018_08_23_172554) do
+
+  create_table "careers", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "starting_salary"
+    t.integer "potential_salary"
+    t.string "education"
+  end
 
   create_table "choices", force: :cascade do |t|
     t.string "name"
