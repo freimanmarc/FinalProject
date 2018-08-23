@@ -9,32 +9,37 @@
   Question.destroy_all
 
   question1 = Question.new
-  question1.prompt = "Do you enjoy working hands on?"
+
+  question1.prompt = "Do you like hands-on work?"
   question1.save
   question1.choices << Choice.create(name:"Yes")
   question1.choices << Choice.create(name:"No")
+  question1.choices << Choice.create(name:"Undecided")
 
 
   question1 = Question.new
-  question1.prompt = "Would you rather work indoors or outdoors?"
+  question1.prompt = "What is your preferred work environment?"
   question1.save
-  question1.choices << Choice.create(name:"Indoors")
   question1.choices << Choice.create(name:"Outdoors")
+  question1.choices << Choice.create(name:"Office")
+  question1.choices << Choice.create(name:"Undecided")
+
 
   question1 = Question.new
   question1.prompt = "Would you rather work alone, or with a group?"
   question1.save
   question1.choices << Choice.create(name:"Alone")
   question1.choices << Choice.create(name:"Group")
+  question1.choices << Choice.create(name:"Undecided")
 
   question1 = Question.new
   question1.prompt = "Do you like working on puzzles?"
   question1.save
   question1.choices << Choice.create(name:"Yes")
   question1.choices << Choice.create(name:"No")
+  question1.choices << Choice.create(name:"Undecided")
 
-
-puts "Izzy is awesome!"
+puts "#{Quiestion.count} Questions..."
 
 Career.destroy_all
 
@@ -55,4 +60,6 @@ Career.create(title: "Dental Hygienist", description: "Helping both patients and
 Career.create(title: "Radiographer", description: "Radiographers are Health Care professionals who specialize in the imaging of human anatomy for diagnosis and treatment of injury and disease. Radiographic image processing and evaluation, radiation protection, and basic patient assessment are within the scope of practice of a radiographer.", starting_salary: 40000, potential_salary: 80000, education: "3 years at Miami Dade College.",)
 Career.create(title: "Receptionist", description: "Being a Receptionist is a great way to learn more about the day-to-day operations of a business or company. You will be the gate-keeper to your office, helping make sure everything is organized and efficient.", starting_salary: 30000, potential_salary: 40000, education: "The educational requirements for this career path are a high school diploma or GED.",)
 
+
 puts "#{Career.count} careers..."
+
