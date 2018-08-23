@@ -8,6 +8,7 @@
 
   Question.destroy_all
 
+
   question1 = Question.new
   question1.prompt = "Do you like hands-on work?"
   question1.save
