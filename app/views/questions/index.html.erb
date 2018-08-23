@@ -1,11 +1,10 @@
-<% @questions.each do |question| %>
-
-  <p>
-  <%= question.prompt %>
-  </p>
-  <% question.choices.each do |choice| %>
-  <p>
-    <%= choice.name %>
-  </p>
+<%= form_tag do %>
+  <% @questions.each do |question| %>
+    <p>
+      <%= question.prompt %>
+    </p>
+    <%= select_tag "questions", options_from_collection_for_select(question.choices, "id", "name") %>
+    <% question.choices.each do |choice| %>
+    <% end %>
   <% end %>
 <% end %>
