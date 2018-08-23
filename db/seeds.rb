@@ -9,7 +9,6 @@
   Question.destroy_all
 
   question1 = Question.new
-
   question1.prompt = "Do you like hands-on work?"
   question1.save
   question1.choices << Choice.create(name:"Yes")
@@ -39,7 +38,7 @@
   question1.choices << Choice.create(name:"No")
   question1.choices << Choice.create(name:"Undecided")
 
-puts "#{Quiestion.count} Questions..."
+puts "#{Question.count} Questions..."
 
 Career.destroy_all
 
@@ -62,4 +61,3 @@ Career.create(title: "Receptionist", description: "Being a Receptionist is a gre
 
 
 puts "#{Career.count} careers..."
-
