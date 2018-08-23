@@ -10,6 +10,12 @@
   </head>
 
   <body class="container">
+    <div class="navBar">
+      <span class="clickLink"><%= link_to("HOME", root_path) %></span>
+      <span class="clickLink"><%= link_to("Test", questions_path) %></span>
+      <span class="clickLink"><%= link_to("Job List", root_path) %></span>
+      <span class="clickLink"><%= link_to("Contact Us", contact_path) %></span>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
