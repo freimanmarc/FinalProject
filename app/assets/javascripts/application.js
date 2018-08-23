@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fakeSubmit = (ev) => {
+    ev.preventDefault()
+    document.getElementById("contactForm").remove()
+
+  }
+  document.querySelector("#contactForm form").addEventListener("submit", fakeSubmit)
+});
