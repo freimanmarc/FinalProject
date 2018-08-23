@@ -1,22 +1,29 @@
-<h1 class="title">Test</h1>
-<hr>
-  <div class="navBar">
-    <%= link_to("Test", questions_path) %>
-    <%= link_to("Job List", root_path) %>
-    <%= link_to("Contact Us", root_path) %>
-    <%= link_to("HOME", root_path) %>
-  </div>
-<hr>
-<%= form_tag do %>
-  <% @questions.each do |question| %>
-    <p>
-      <%= question.prompt %>
-    </p>
-    <%= select_tag "questions", options_from_collection_for_select(question.choices, "id", "name") %>
-    <% question.choices.each do |choice| %>
-    <div class="actions">
-</div>
-    <% end %>
-  <% end %>
-  <%= submit_tag "Submit", class: "btn btn-primary" %>
-<% end %>
+<body>
+  <h1 class="title">Test</h1>
+    <hr>
+      <div class="navBar">
+        <span class="clickLink"><%= link_to("HOME", root_path) %></span>
+        <span class="clickLink"><%= link_to("Test", questions_path) %></span>
+        <span class="clickLink"><%= link_to("Job List", root_path) %></span>
+        <span class="clickLink"><%= link_to("Contact Us", root_path) %></span>
+      </div>
+    <hr>
+    <div class="test">
+      <%= form_tag do %>
+        <% @questions.each do |question| %>
+            <p>
+              <%= question.prompt %>
+            </p>
+            <p class="testAnswers">
+            <%= select_tag "questions", options_from_collection_for_select(question.choices, "id", "name") %>
+            <% question.choices.each do |choice| %>
+            <% end %>
+            </p>
+        <% end %>
+    </div>
+        <br>
+          <div class="float-right">
+            <%= submit_tag "Submit", class: "btn btn-primary" %>
+          </div>
+      <% end %>
+</body>
