@@ -5,6 +5,9 @@
     </p>
     <%= select_tag "questions", options_from_collection_for_select(question.choices, "id", "name") %>
     <% question.choices.each do |choice| %>
+    <div class="actions">
+</div>
     <% end %>
   <% end %>
+  <%= submit_tag "Submit", class: "btn btn-primary" %>
 <% end %>

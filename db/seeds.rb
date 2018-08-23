@@ -9,19 +9,30 @@
   Question.destroy_all
 
   question1 = Question.new
-  question1.prompt = "What is your favorite color?"
+  question1.prompt = "Do you like hands-on work?"
   question1.save
-  question1.choices << Choice.create(name:"Red")
-  question1.choices << Choice.create(name:"Blue")
-  question1.choices << Choice.create(name:"Yellow")
+  question1.choices << Choice.create(name:"Yes")
+  question1.choices << Choice.create(name:"No")
+  question1.choices << Choice.create(name:"Undecided")
 
 
   question1 = Question.new
-  question1.prompt = "What is your favorite food?"
+  question1.prompt = "What is your preferred work environment?"
   question1.save
-  question1.choices << Choice.create(name:"Beer")
-  question1.choices << Choice.create(name:"Bread")
-  question1.choices << Choice.create(name:"Peanuts")
+  question1.choices << Choice.create(name:"Outdoors")
+  question1.choices << Choice.create(name:"Office")
+  question1.choices << Choice.create(name:"Undecided")
 
+  question1 = Question.new
+  question1.prompt = "Would you rather work by youself or in a group?"
+  question1.save
+  question1.choices << Choice.create(name:"Alone")
+  question1.choices << Choice.create(name:"Group")
+  question1.choices << Choice.create(name:"Undecided")
 
-puts "Izzy is awesome!"
+  question1 = Question.new
+  question1.prompt = "Would you rather work by youself or in a group?"
+  question1.save
+  question1.choices << Choice.create(name:"Alone")
+  question1.choices << Choice.create(name:"Group")
+  question1.choices << Choice.create(name:"Undecided")
