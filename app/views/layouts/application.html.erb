@@ -10,12 +10,15 @@
   </head>
 
   <body class="container">
-    <div class="navBar">
-      <span class="clickLink"><%= link_to("HOME", root_path) %></span>
-      <span class="clickLink"><%= link_to("Test", questions_path) %></span>
-      <span class="clickLink"><%= link_to("Job List", root_path) %></span>
-      <span class="clickLink"><%= link_to("Contact Us", contact_path) %></span>
-    </div>
+      <div class="navBar">
+          <a class="btn btn-outline-info" href="/" role="button">Home</a>
+          <a class="btn btn-outline-info" href="questions" role="button">Take Our Test!</a>
+          <a class="btn btn-outline-info" href="/" role="button">See Your Next Job!</a>
+          <a class="btn btn-outline-info" href="contact" role="button">Contact Us!</a>
+      </div>
+      <div class="float-right">
+        <%= link_to image_tag("yourNextMoveLogo/smallYnmLogo.jpg"), root_path %>
+      </div>
     <div class="container">
       <%= yield %>
     </div>

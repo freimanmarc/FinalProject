@@ -15,7 +15,7 @@
  */
 
  body {
-   background-color: lightgrey;
+   background-color: white;
    font-family: Arial, Helvetica, sans-serif;
  }
  .navBar {
@@ -24,6 +24,10 @@
 
  .clickLink {
    margin-right: 2.5%;
+ }
+
+ .title {
+   color: #17a2b8;
  }
 
  .test {
