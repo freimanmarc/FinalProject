@@ -1,7 +1,6 @@
-<body>
   <h1 class="title">Test</h1>
   <hr>
-    <div class="test">
+    <div id="test" class="">
       <%= form_tag do %>
         <% @questions.each do |question| %>
             <p>
@@ -14,9 +13,10 @@
             </p>
         <% end %>
     </div>
+
         <br>
           <div class="float-right">
             <%= submit_tag "Submit", class: "btn btn-primary" %>
           </div>
       <% end %>
-</body>
+
