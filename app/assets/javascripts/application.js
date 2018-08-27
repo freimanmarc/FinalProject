@@ -16,14 +16,14 @@
 //= require_tree .
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const fakeSubmit = (ev) => {
-    ev.preventDefault()
-    document.getElementById("contactForm").remove()
+// document.addEventListener("DOMContentLoaded", function() {
+//     const fakeSubmit = (ev) => {
+//     ev.preventDefault()
+//     document.getElementById("contactForm").remove()
 
-  }
-  document.querySelector("#contactForm form").addEventListener("submit", fakeSubmit)
-});
+//   }
+//   document.querySelector("#contactForm form").addEventListener("submit", fakeSubmit)
+// });
 
 
 var slideIndex = 1;
