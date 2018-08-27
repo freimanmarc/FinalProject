@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 resources :questions
 resources :careers
   root 'questions#home'
+  get 'contact' => 'contacts#index'
 end

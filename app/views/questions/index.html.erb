@@ -1,5 +1,5 @@
-<body>
   <h1 class="title">Test</h1>
+
     <hr>
       <div class="navBar">
         <span class="clickLink"><%= link_to("HOME", root_path) %></span>
@@ -9,6 +9,10 @@
       </div>
     <hr>
     <div class="test">
+
+  <hr>
+    <div id="test" class="">
+
       <%= form_tag do %>
         <% @questions.each do |question| %>
             <p>
@@ -21,9 +25,10 @@
             </p>
         <% end %>
     </div>
+
         <br>
           <div class="float-right">
             <%= submit_tag "Submit", class: "btn btn-primary" %>
           </div>
       <% end %>
-</body>
+

@@ -1,3 +1,4 @@
+
 <body>
   <h1 class="title">Your Next Move</h1>
     <hr>
@@ -6,7 +7,59 @@
       <span class="clickLink"><%= link_to("Test", questions_path) %></span>
       <span class="clickLink"><%= link_to("Job List", careers_path) %></span>
       <span class="clickLink"><%= link_to("Contact Us", root_path) %></span>
+
+<h1 class="title">Your Next Move</h1>
+<hr>
+
+ 
+    <div class="container">
+      <div id="mycarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mycarousel" data-slide-to="1"></li>
+          <li data-target="#mycarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item fade active">
+            <img src="/images/home1.jpg">
+            <div class="carousel-caption">
+              <h1>From Dreams to Design</h1>
+              <p>UX/UI and other Design Focused careers are always in demand</p>
+              <p><a href="#" class="btn btn-primary btn-sm">Find Out More</a></p>
+            </div>
+          </div>
+          <div class="item fade">
+            <div class="slide2"></div>
+            <img src="/images/home2.jpg">
+            <div class="carousel-caption">
+              <h2>Better Careers Better Lives</h2>
+              <p>Architecture and Building Management continues to be a growing industry</p>
+              <p><a href="#" class="btn btn-primary btn-sm">Find Out More</a></p>
+            </div>
+          </div>
+          <div class="item fade">
+            <div class="slide3"></div>
+            <img src="/images/home3.jpg">
+            <div class="carousel-caption">
+              <h1>Hands-On in the Cloud</h1>
+              <p>Server Engineers and DevOps are quickly paving the way for the future</p>
+              <p><a href="#" class="btn btn-primary btn-sm">Find Out More</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!--Navigation control-->
+        <a class="left carousel-control" href="#mycarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#mycarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+
     </div>
-    <hr>
-   <div>Hello World</div>
-</body>
+    <div class="container title">
+      <h2>Your Next Move encourages growth in all careers</h2>
+    </div>
+    
