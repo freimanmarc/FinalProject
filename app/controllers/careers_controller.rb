@@ -1,6 +1,5 @@
-class CareerController < ApplicationController
-
-    def index
-      @careers = Career.all
-    end
+class CareersController < ApplicationController
+  def index
+    @careers = Career.all
   end
+end
