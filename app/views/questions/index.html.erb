@@ -1,6 +1,18 @@
   <h1 class="title">Test</h1>
+
+    <hr>
+      <div class="navBar">
+        <span class="clickLink"><%= link_to("HOME", root_path) %></span>
+        <span class="clickLink"><%= link_to("Test", questions_path) %></span>
+        <span class="clickLink"><%= link_to("Job List", careers_path) %></span>
+        <span class="clickLink"><%= link_to("Contact Us", root_path) %></span>
+      </div>
+    <hr>
+    <div class="test">
+
   <hr>
     <div id="test" class="">
+
       <%= form_tag do %>
         <% @questions.each do |question| %>
             <p>

@@ -14,30 +14,26 @@
   question1.save
   question1.choices << Choice.create(name:"Yes")
   question1.choices << Choice.create(name:"No")
-  question1.choices << Choice.create(name:"Undecided")
 
 
-  question1 = Question.new
-  question1.prompt = "What is your preferred work environment?"
-  question1.save
-  question1.choices << Choice.create(name:"Outdoors")
-  question1.choices << Choice.create(name:"Office")
-  question1.choices << Choice.create(name:"Undecided")
+  question2 = Question.new
+  question2.prompt = "What is your preferred work environment?"
+  question2.save
+  question2.choices << Choice.create(name:"Outdoors")
+  question2.choices << Choice.create(name:"Office")
 
 
-  question1 = Question.new
-  question1.prompt = "Would you rather work alone, or with a group?"
-  question1.save
-  question1.choices << Choice.create(name:"Alone")
-  question1.choices << Choice.create(name:"Group")
-  question1.choices << Choice.create(name:"Undecided")
+  question3 = Question.new
+  question3.prompt = "Would you rather work alone, or with a group?"
+  question3.save
+  question3.choices << Choice.create(name:"Alone")
+  question3.choices << Choice.create(name:"Group")
 
-  question1 = Question.new
-  question1.prompt = "Do you like working on puzzles?"
-  question1.save
-  question1.choices << Choice.create(name:"Yes")
-  question1.choices << Choice.create(name:"No")
-  question1.choices << Choice.create(name:"Undecided")
+  question4 = Question.new
+  question4.prompt = "Do you like working on puzzles?"
+  question4.save
+  question4.choices << Choice.create(name:"Yes")
+  question4.choices << Choice.create(name:"No")
 
 puts "#{Question.count} Questions..."
 
