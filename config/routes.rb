@@ -5,4 +5,7 @@ resources :questions
 resources :careers
   root 'questions#home'
   get 'contact' => 'contacts#index'
+
+resources :quiz_submissions, only: [:create]
+
 end
