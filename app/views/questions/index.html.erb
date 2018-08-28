@@ -1,23 +1,15 @@
-  <h1 class="title">Test</h1>
-
-    <div id="test">
-
-      <%= form_tag do %>
-        <% @questions.each do |question| %>
-            <p>
-              <%= question.prompt %>
-            </p>
-            <p class="testAnswers">
-            <%= select_tag "questions", options_from_collection_for_select(question.choices, "id", "name") %>
-            <% question.choices.each do |choice| %>
-            <% end %>
-            </p>
-        <% end %>
-    </div>
-
-        <br>
-          <div class="float-right">
-            <%= submit_tag "Submit", class: "btn btn-primary" %>
-          </div>
-      <% end %>
-
+<%= form_tag quiz_submissions_path do %>
+  <div id="test">
+    <% @questions.each do |question| %>
+        <p><%= question.prompt %></p>
+        <p class="testAnswers">
+          <%= select_tag "question_#{question.id}",
+              options_from_collection_for_select(question.choices, "id", "name") %>
+        </p>
+    <% end %>
+  </div>
+  <br>
+  <div class="float-right">
+    <%= submit_tag "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
