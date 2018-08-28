@@ -31,9 +31,10 @@
  }
 
  #test {
-  background-image: url("/images/books.jpeg");
+  background-image: url("/images/books.jpg");
   background-color: #cccccc;
-   margin-bottom: 2.5%;
+  margin-bottom: 2.5%;
+   
  }
 
  .testAnswers{
@@ -43,6 +44,15 @@
 
 
  * {box-sizing:border-box}
+
+ #mycarousel {
+   width: 740px;
+   margin: auto;
+ }
+
+.homePageFooter {
+  text-align: center;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -115,7 +125,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #cccccc;
 }
 
 /* Fading animation */
