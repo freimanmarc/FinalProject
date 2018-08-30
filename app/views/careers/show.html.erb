@@ -2,7 +2,7 @@
 
 <h1><%= car.title %></h1>
 <p><%= car.description %></p>
-<p><%= number_to_currency(car.potential_salary) %></p>
-<p><%= car.education %></p>
+<p><%= "Potential Salary: #{number_to_currency(car.potential_salary)}" %></p>
+<p><%= "Education Requirements: #{car.education}" %></p>
 
 <% end %>

@@ -5,9 +5,9 @@
             <% @careers.each do |career| %>
                 <div> <h4><%= career.title %><h4> </div>
                 <div> <%= career.description %> </div>
-                <div> <%= number_to_currency(career.starting_salary) %> </div>
-                <div> <%= number_to_currency(career.potential_salary) %> </div>
-                <div> <%= career.education %> <div>
+                <div> <%= "Starting Salary: #{number_to_currency(career.starting_salary)}" %> </div>
+                <div> <%= "Potential Salary: #{number_to_currency(career.potential_salary)}" %> </div>
+                <div> <%= "Education Requirements/Options: #{career.education}" %> <div>
                 <div><br /><div>
             <% end %>
         </div>
