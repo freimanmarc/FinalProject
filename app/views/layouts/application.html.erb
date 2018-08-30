@@ -16,6 +16,11 @@
           <a class="btn btn-outline-info" href="/questions" role="button">Take Our Test!</a>
           <a class="btn btn-outline-info" href="/careers" role="button">See Your Next Job!</a>
           <a class="btn btn-outline-info" href="/contact" role="button">Contact Us!</a>
+          <a class="btn-outline-info">
+                <% if user_signed_in? %>
+                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+                <% end %>
+              </li>
       </div>
       <div class="float-right">
         <%= link_to image_tag("yourNextMoveLogo/smallYnmLogo.jpg"), root_path %>
