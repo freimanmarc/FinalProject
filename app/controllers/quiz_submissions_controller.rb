@@ -1,4 +1,5 @@
 class QuizSubmissionsController < ApplicationController
+     before_action :authenticate_user!
 
   def create
     ##figure out the career
