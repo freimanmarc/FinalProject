@@ -12,20 +12,22 @@
 
   <body class="container">
       <div class="navBar">
+          <a name="top"></a>
           <a class="btn btn-outline-info" href="/" role="button">Home</a>
           <a class="btn btn-outline-info" href="/questions" role="button">Take Our Test!</a>
           <a class="btn btn-outline-info" href="/careers" role="button">See Your Next Job!</a>
           <a class="btn btn-outline-info" href="/contact" role="button">Contact Us!</a>
-          <% if user_signed_in? %>
-            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
-          <% end %>
-              </li>
+
+            <% if user_signed_in? %>
+              <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: "btn btn-outline-info" %>
+            <% end %>
       </div>
       <div class="float-right">
         <%= link_to image_tag("yourNextMoveLogo/smallYnmLogo.jpg"), root_path %>
       </div>
-    <div class="container">
+    <div>
       <%= yield %>
+      <a class="backToTop btn btn-danger" href="#top">Back to top</a>
     </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
