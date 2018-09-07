@@ -34,7 +34,7 @@
  background-image: url("/images/books.jpg");
  background-color: #cccccc;
  margin-bottom: 2.5%;
-  
+
 }
 
 .testAnswers{
@@ -137,12 +137,12 @@
 }
 
 @-webkit-keyframes fade {
- from {opacity: .7} 
+ from {opacity: .7}
  to {opacity: 1.5}
 }
 
 @keyframes fade {
- from {opacity: .7} 
+ from {opacity: .7}
  to {opacity: 1.5}
 }
 
@@ -167,7 +167,6 @@
  width: 12%;
 }
 
-@import "compass/css3";
 
 @include keyframes(bounce) {
  0%, 20%, 50%, 80%, 100% {
