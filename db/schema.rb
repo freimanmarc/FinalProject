@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_09_05_212503) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "careers", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_09_05_212503) do
 
   create_table "choices", force: :cascade do |t|
     t.string "name"
-    t.integer "question_id"
+    t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_choices_on_question_id"
@@ -52,4 +55,5 @@ ActiveRecord::Schema.define(version: 2018_09_05_212503) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "choices", "questions"
 end
