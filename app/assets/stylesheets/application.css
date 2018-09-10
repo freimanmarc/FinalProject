@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HOME PAGE *********************** */
+.navBar {
+  width: 100%;
+  margin-top: .2%;
+}
+
+.clickLink {
+  margin-right: 2.5%;
+}
+
+.title {
+  color: #17a2b8;
+}
+
+.homePageFooter {
+  text-align: center;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+}
+
+@import "compass/css3";
+
+/* ARROW */
+.downArrow {
+ position: fixed;
+ bottom: 1%;
+ left: 10%;
+}
+
+.bounce {
+ -moz-animation: bounce 3s infinite;
+ -webkit-animation: bounce 3s infinite;
+ animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+   -moz-transform: translateY(0);
+   transform: translateY(0);
+ }
+ 40% {
+   -moz-transform: translateY(-30px);
+   transform: translateY(-30px);
+ }
+ 60% {
+   -moz-transform: translateY(-15px);
+   transform: translateY(-15px);
+ }
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+   -webkit-transform: translateY(0);
+   transform: translateY(0);
+ }
+ 40% {
+   -webkit-transform: translateY(-30px);
+   transform: translateY(-30px);
+ }
+ 60% {
+   -webkit-transform: translateY(-15px);
+   transform: translateY(-15px);
+ }
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+   -moz-transform: translateY(0);
+   -ms-transform: translateY(0);
+   -webkit-transform: translateY(0);
+   transform: translateY(0);
+ }
+ 40% {
+   -moz-transform: translateY(-30px);
+   -ms-transform: translateY(-30px);
+   -webkit-transform: translateY(-30px);
+   transform: translateY(-30px);
+ }
+ 60% {
+   -moz-transform: translateY(-15px);
+   -ms-transform: translateY(-15px);
+   -webkit-transform: translateY(-15px);
+   transform: translateY(-15px);
+ }
+}
+
+.ourPromise {
+  width: 1100px;
+}
+
+.sideBar1 {
+  position: absolute;
+  left: .25%;
+  width: 250px;
+}
+.sideBar2 {
+  position: absolute;
+  right: .25%;
+  width: 250px;
+}
+
+#homePageCenterImage {
+  width: 740px;
+  margin: auto;
+  position: relative;
+}
+
+#homePageCenterImageText {
+  text-align: center;
+}
+ /* TEST PAGE *********************** */
+
+#test {
+ background-image: url("/images/books.jpg");
+ background-color: #cccccc;
+ margin-bottom: 2.5%;
+
+}
+
+.testAnswers{
+  margin-bottom: 4em;
+}
+
+ /* CONTACT PAGE *********************** */
+
+.description {
+  padding-right: 30%;
+}
+
+
+.checkboxSpace {
+  padding-left: 1.5em;
+}
+
+.nameEmailInput, .submissionSelect {
+  width: 23.5%;
+}
+
+.phoneInput {
+  width: 12%;
+}
