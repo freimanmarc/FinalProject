@@ -9,6 +9,7 @@ ruby '>= 2.4.2'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'axios_rails', '~> 0.7.0'
+gem 'webpacker'
 gem 'devise'
 gem 'pg'
 # Use Puma as the app server
