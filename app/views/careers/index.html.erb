@@ -56,10 +56,10 @@
                   </button>
               </div>
               <div class="school-content modal-body">
-                  ...
+                  <%= career.title %> trade schools near your provide an excellent opportunity for you to excell and create a new career.
               </div>
               <div class="modal-footer">
-                  <a class="btn btn-success" href="https://www.glassdoor.com/index.htm" role="button">Find More Schools!</a>
+                  <a class="btn btn-success" href="https://www.trade-schools.net/locations/" role="button">Find More Schools!</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
               </div>
@@ -87,7 +87,7 @@
                               let f = $(this).parents('.shit').find('.job-content')
 
                               data.map(ass => {
-                                  f.append(ass.position_title)
+                                  f.append('<p class="assTitle">' + ass.position_title + ' ' + '<a class="assLink" href=' + ass.url + '>' + 'hello' + '</a>' + '</p>')
                               })
 
                           })
