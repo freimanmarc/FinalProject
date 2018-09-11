@@ -161,3 +161,12 @@
 .phoneInput {
   width: 12%;
 }
+
+.assTitle, p {
+  text-decoration: underline;
+}
+
+
+.assLink {
+  font-size: 100%;
+}

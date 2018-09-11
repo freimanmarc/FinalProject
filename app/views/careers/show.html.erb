@@ -1,45 +1,105 @@
 <a class="btn-outline-info">
   <h1 class="title">Your Job List</h1>
 <hr>
+  <div class="jobList">
+      <% @career.each do |career| %>
+      <div class='shit'>
+          <%= image_tag "/images/#{career.title}.jpg", :class => "rounded float-right" %>
+              <div class="title"> <h3><%= career.title %></h3> </div>
+              <div class="description"> <%= career.description %> </div>
+              <div> <%= "Starting Salary: #{number_to_currency(career.starting_salary)}" %> </div>
+              <div> <%= "Potential Salary: #{number_to_currency(career.potential_salary)}" %> </div>
+              <div> <%= "Education Requirements/Options: #{career.education}" %> </div>
+          <div class="spacer"></div>
+          <br>
+          <!-- JOBS Button trigger modal -->
+          <button type="button" class="fuck btn btn-success" data-toggle="modal" data-target="#exampleModal<%=career.title.delete(' ').camelize%>">
+          See Jobs in Your Area!
+          </button>
 
-<div class="jobList">
-  <% @career.each do |car| %>
+          <!-- Jobs Modal -->
+          <div class="modal" id="exampleModal<%=career.title.delete(' ').camelize%>" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><%= career.title %></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="job-content modal-body">
 
-              <%= image_tag "/images/#{car.title}.jpg", :class => "rounded float-right" %>
-  <h1><%= car.title %></h1>
-  <p><%= car.description %></p>
-  <p><%= "Potential Salary: #{number_to_currency(car.potential_salary)}" %></p>
-  <p><%= "Education Requirements: #{car.education}" %></p>
-              <div class="spacer"></div>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<%=car.title.delete(' ').camelize%>">
-              See Jobs in Your Area!
-              </button>
-
-              <!-- Modal -->
-              <div class="modal" id="exampleModal<%=car.title.delete(' ').camelize%>" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel"><%= car.title %></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      ...
-                  </div>
-                  <div class="modal-footer">
-                      <a class="btn btn-success" href="https://www.glassdoor.com/index.htm" role="button">See More Jobs on GlassDoor!</a>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                  </div>
+              </div>
+              <div class="modal-footer">
+                  <a class="btn btn-success" href="https://www.glassdoor.com/index.htm" role="button">See More Jobs on GlassDoor!</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
               </div>
-              <div class="spacer"></div>
-              <hr>
-              <br />
-          <% end %>
-      </div>
-  <hr>
-</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <br>
+           <!-- SCHOOLS Button trigger modal -->
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal2<%=career.title.delete(' ').camelize%>">
+          Trade Schools Near You!
+          </button>
+
+          <!-- Schools Modal -->
+          <div class="modal" id="modal2<%=career.title.delete(' ').camelize%>" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="modal2Label"><%= career.title %></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="school-content modal-body">
+                  <%= career.title %> trade schools near your provide an excellent opportunity for you to excell and create a new career.
+              </div>
+              <div class="modal-footer">
+                  <a class="btn btn-success" href="https://www.trade-schools.net/locations/" role="button">Find More Schools!</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+              </div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <hr>
+          <br />
+          </div>
+      <% end %>
+            <script>
+
+
+                      async function searchJobs(job) {
+                        let results = await axios.get(`https://jobs.search.gov/jobs/search.json?query=${job}+jobs`);
+                        return results
+                      }
+
+
+                      $('.fuck').on('click', function(){
+                          let job = $(this).parents('.shit').find('h3').get(0).innerText
+
+                          let res = searchJobs(job)
+                          res.then(({data}) => {
+                              let f = $(this).parents('.shit').find('.job-content')
+
+                              data.map(ass => {
+                                  f.append(
+                                   '<h4 class="assTitle">' + ass.position_title + '<br>' +
+                                   '<h6 class="assJob">' + ass.organization_name + '</h6>' + '<br>' + 
+                                   '<h6 class="assPay">' + ass.maximum.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</h6>' + '<br>' + 
+                                   '<a class="assLink" href=' + ass.url + '>' + 'See Full Job Listing' + '</a>' + 
+                                   '</h4>' + 
+                                   '<hr>')
+                              })
+
+                          })
+
+                      })
+
+              </script>
+  </div>
+<hr>
