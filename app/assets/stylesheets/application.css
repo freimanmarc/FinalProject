@@ -43,8 +43,6 @@
   right: 5%;
 }
 
-@import "compass/css3";
-
 /* ARROW */
 .downArrow {
  position: fixed;
