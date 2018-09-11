@@ -87,7 +87,13 @@
                               let f = $(this).parents('.shit').find('.job-content')
 
                               data.map(ass => {
-                                  f.append(ass.position_title)
+                                  f.append(
+                                   '<h4 class="assTitle">' + ass.position_title + '<br>' +
+                                   '<h6 class="assJob">' + ass.organization_name + '</h6>' + '<br>' + 
+                                   '<h6 class="assPay">' + ass.maximum.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) + '</h6>' + '<br>' + 
+                                   '<a class="assLink" href=' + ass.url + '>' + 'See Full Job Listing' + '</a>' + 
+                                   '</h4>' + 
+                                   '<hr>')
                               })
 
                           })

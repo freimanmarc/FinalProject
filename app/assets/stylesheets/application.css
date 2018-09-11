@@ -162,11 +162,11 @@
   width: 12%;
 }
 
-.assTitle {
-  color: aqua;
+.assTitle, p {
+  text-decoration: underline;
 }
 
+
 .assLink {
-  height: 10px;
-  background-color: red;
+  font-size: 100%;
 }
