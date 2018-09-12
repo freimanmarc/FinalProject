@@ -8,6 +8,6 @@ resources :questions
 resources :careers, only: [:index]
   get 'contact' => 'contacts#index'
 
-resources :quiz_submissions, only: [:create]
+resources :quiz_submissions, only: [:create, :show]
 
 end
